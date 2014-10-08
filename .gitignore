@@ -4,3 +4,12 @@
 node_modules/
 platforms/
 plugins/
+
+.*.sw[ponxmn]
+.vimtagsdisplay
+tags
+tmp*
+*~
+vim.sh
+temp*
+errors.err
