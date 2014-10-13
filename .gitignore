@@ -11,5 +11,5 @@ tags
 tmp*
 *~
 vim.sh
-temp*
+tmp/*
 errors.err
