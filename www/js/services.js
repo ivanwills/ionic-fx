@@ -26,7 +26,7 @@ services.factory('Friends', function() {
 });
 
 services.factory('Sounds', function() {
-    debugger;
+
     if (!localStorage.getItem('sounds') || localStorage.getItem('sounds').length === 0) {
         localStorage.setItem('sounds', JSON.stringify([
             { id: 0, name: 'Tada' , wav: 'tada.wav' },

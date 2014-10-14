@@ -1,6 +1,11 @@
 angular.module('starter.controllers', [])
 
-.controller('DashCtrl', function($scope) {
+.controller('DashCtrl', function($scope, Sounds) {
+    $scope.sounds = Sounds.all();
+})
+
+.controller('DashDetailCtrl', function($scope, $stateParams, Sounds) {
+    $scope.sound = Sounds.get($stateParams.soundId);
 })
 
 .controller('FriendsCtrl', function($scope, Friends) {
