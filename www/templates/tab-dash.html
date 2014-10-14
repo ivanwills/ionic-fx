@@ -1,5 +1,9 @@
 <ion-view title="Sound Fx">
     <ion-content class="padding">
-        <h1>Dash</h1>
+        <ion-list class="sounds">
+            <ion-item ng-repeat="sound in sounds" type="item-text-wrap" href="#/tab/sound/{{sound.id}}">
+                {{sound.name}}
+            </ion-item>
+        </ion-list>
     </ion-content>
 </ion-view>

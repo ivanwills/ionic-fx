@@ -1,9 +1,9 @@
-angular.module('starter.services', [])
+var services = angular.module('starter.services', []);
 
 /**
  * A simple example service that returns some data.
  */
-.factory('Friends', function() {
+services.factory('Friends', function() {
     // Might use a resource here that returns a JSON array
 
     // Some fake testing data
@@ -22,5 +22,27 @@ angular.module('starter.services', [])
             // Simple index lookup
             return friends[friendId];
         }
+    };
+});
+
+services.factory('Sounds', function() {
+    debugger;
+    if (!localStorage.getItem('sounds') || localStorage.getItem('sounds').length === 0) {
+        localStorage.setItem('sounds', JSON.stringify([
+            { id: 0, name: 'Tada' , wav: 'tada.wav' },
+            { id: 1, name: 'Fair' , wav: 'fair.wav' },
+            { id: 2, name: 'Think', wav: 'think.wav' },
+            { id: 3, name: 'Other', wav: 'other.wav' },
+        ]));
     }
+
+    return {
+        all: function() {
+            return JSON.parse(localStorage.getItem('sounds'));
+        },
+        get: function(soundId) {
+            // Simple index lookup
+            return JSON.parse(localStorage.getItem('sounds'))[soundId];
+        }
+    };
 });
