@@ -1,9 +1,9 @@
-var services = angular.module('starter.services', []);
+angular.module('starter.services', [])
 
 /**
  * A simple example service that returns some data.
  */
-services.factory('Friends', function() {
+.factory('Friends', function() {
     // Might use a resource here that returns a JSON array
 
     // Some fake testing data
@@ -23,9 +23,9 @@ services.factory('Friends', function() {
             return friends[friendId];
         }
     };
-});
+})
 
-services.factory('Sounds', function() {
+.factory('Sounds', function() {
 
     if (!localStorage.getItem('sounds') || localStorage.getItem('sounds').length === 0) {
         localStorage.setItem('sounds', JSON.stringify([
