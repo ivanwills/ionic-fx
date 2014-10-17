@@ -1,0 +1,9 @@
+ion-list {
+    &.sounds {
+        div.list ion-item {
+            width: 49%;
+            margin: 0 0.5%;
+            display: inline-block;
+        }
+    }
+}
