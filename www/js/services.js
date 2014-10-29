@@ -29,10 +29,12 @@ angular.module('starter.services', [])
 
     if (!localStorage.getItem('sounds') || localStorage.getItem('sounds').length === 0) {
         localStorage.setItem('sounds', JSON.stringify([
-            { id: 0, name: 'Tada' , wav: 'tada.wav' },
-            { id: 1, name: 'Fair' , wav: 'fair.wav' },
-            { id: 2, name: 'Think', wav: 'think.wav' },
-            { id: 3, name: 'Other', wav: 'other.wav' },
+            { id: 0, name: 'Bell'       , wav: 'bell.ogg'        },
+            { id: 1, name: 'Error'      , wav: 'error.ogg'       },
+            { id: 2, name: 'Information', wav: 'information.ogg' },
+            { id: 3, name: 'Message'    , wav: 'message.ogg'     },
+            { id: 4, name: 'Question'   , wav: 'question.ogg'    },
+            { id: 5, name: 'Slide'      , wav: 'slide.ogg'       }
         ]));
     }
 
